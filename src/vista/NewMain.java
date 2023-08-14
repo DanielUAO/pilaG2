@@ -5,7 +5,9 @@
  */
 package vista;
 
+import datos.Cliente;
 import datos.Producto;
+import modelo.Cola;
 import modelo.Pila;
 
 /**
@@ -29,6 +31,17 @@ public class NewMain {
         pilaP1.desapilar();
         
         System.out.println("Pila modificada" + pilaP1.toString());
+        
+        Cola<Cliente> colaC1 = new Cola<>();
+        colaC1.encolar(new Cliente("Carlos", "34563456", 1697));
+        colaC1.encolar(new Cliente("David", "3005798654", 2201675));
+        colaC1.encolar(new Cliente("Daniela", "3135673245", 2186754));
+        
+        System.out.println("Cola Original"+ colaC1.toString());
+        
+        colaC1.desencolar();
+        
+        System.out.println("Cola modificada" + colaC1.toString());
     }
     
 }
